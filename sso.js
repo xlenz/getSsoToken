@@ -17,7 +17,6 @@ var re = /sid=(.*?)(&)/;
 function getSSOToken(params, callback) {
   var usr = params.usr ? params.usr : 'admin';
   var pwd = params.pwd ? params.pwd : '';
-  var isEncoded = params.isEncoded ? params.isEncoded : false;
 
   if (!params.host) {
     throw new Error('host name should be provided');
@@ -26,12 +25,12 @@ function getSSOToken(params, callback) {
     throw new Error('you must use callback in order to get token');
   }
   console.log('Getting sso, host: "{0}", usr: "{1}", pwd: "{2}", isEncoded: "{3}" \n'
-    .format(params.host, usr, pwd, isEncoded));
+    .format(params.host, usr, pwd, params.isEncoded));
 
   loginUrl = loginUrl.format(params.host);
   authUrl = authUrl.format(params.host, '{0}');
 
-  getAuthData(usr, pwd, isEncoded, callback);
+  getAuthData(usr, pwd, params.isEncoded, callback);
 }
 
 function getAuthData(usr, pwd, isEncoded, callback) {
