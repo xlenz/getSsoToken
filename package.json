@@ -1,0 +1,31 @@
+{
+  "name": "getSsoToken",
+  "version": "0.0.1",
+  "description": "gets SSO Token, SERENA internal usage",
+  "main": "sso.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xlenz/getSsoToken.git"
+  },
+  "keywords": [
+    "get",
+    "sso",
+    "token",
+    "serena"
+  ],
+  "author": "mgrybyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xlenz/getSsoToken/issues"
+  },
+  "homepage": "https://github.com/xlenz/getSsoToken",
+  "dependencies": {
+    "querystring": "~0.2.0",
+    "request": "~2.33.0",
+    "cheerio": "~0.13.1",
+    "libxmljs": "~0.8.1"
+  }
+}
