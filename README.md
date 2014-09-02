@@ -21,3 +21,4 @@ node ssoCmd stl-qa-oalmt3 admin
 
 node ssoCmd stl-qa-oalmt3 oscar password
 
+.
